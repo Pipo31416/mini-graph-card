@@ -699,7 +699,7 @@ class MiniGraphCard extends LitElement {
 
       if (stateMap) {
         return stateMap.label;
-      } else {
+      } else if(!(Number(inState) === inState && inState % 1 !== 0)) {
         log(`value [${inState}] not found in state_map`);
       }
     }
